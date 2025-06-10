@@ -1,0 +1,21 @@
+name: Echo name
+
+
+on:
+  push:
+    branches:
+      - 'feature/*'
+      - main
+
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    name: code-quality-checks
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+
+      - name: Echo name
+        uses: lolitaad1989/practice@main
+        with:
+          name: 'Alice'
